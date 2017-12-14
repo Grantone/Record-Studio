@@ -37,7 +37,7 @@
       <img src="{{studios_item.studio_image.url}}" class="img-responsive" alt="Image" id="space">
 
 
-      <a href="">
+      <a href="{% url 'studio' studios_item.id%}">
         <h4 class="text-center">{{studios_item.name}}</h4></a>
     </div>
     {% endfor %}

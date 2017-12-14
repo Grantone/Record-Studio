@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load bootstrap3 %} {% load static %} {% block scripts %}
 
-<div class="row">
-  <h3>Most featured get_studios</h3>
+<div class="col-md-6">
+  <h3>Most featured studios</h3>
   <p>Get see the studios ranked most and the best studios in town for you artists who are really interested.</p>
 </div>
 
@@ -9,15 +9,18 @@
 <header class="text-center text-white d-flex" class="container">
   <div class="image_studio">
     <div class="">
-      <a href="{% url 'search_results' %}">{{studio.name}}</a>
+      <a href="{% url 'search_results' %}"></a>
     </div>
     <div class="container" id="inga">
-      <a href="{% url 'studio' studio_id %}">{{studio.name}}
-            <img src="{{studio.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>
+      <a href="{% url 'studio' studio.id %}">{{studio.name}}
+            <img src="{{studio.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>{{studio.description}}<br> {{studio.price}}
     </div>
-    {%for tag in studio.tags.all%}
-    <p id="pic">{{tag.name}} </p>
-    {%endfor%}
+
   </div>
+  <br>
+  <div class="col-md-4">
+    <div id="map">
+    </div>
+
 </header>
 {% endblock %}

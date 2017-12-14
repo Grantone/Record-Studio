@@ -59,8 +59,10 @@ class Studio(models.Model):
         return self.name
 
     @classmethod
-    def get_studios(cls):
-        studios = cls.objects.all()
+    def get_studio(cls, studio_id):
+        studio = cls.objects.get(id=studio_id)
+
+        return studio
 
 
 @classmethod

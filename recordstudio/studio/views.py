@@ -19,7 +19,7 @@ def studio(request, studio_id):
 
     # print(studio_id)
     try:
-        studio = Studio.get_studios(id=studio_id)
+        studio = Studio.get_studio(studio_id)
 
     except Studio.DoesNotExist:
         raise Http404()
