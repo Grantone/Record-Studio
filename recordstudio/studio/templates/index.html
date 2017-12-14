@@ -5,7 +5,7 @@
     <ul>
       {% for tag in tags%}
       <div class="col-md-1">
-        <a href="{% url 'tags' tag.id%}"><img src="{{tags.image.url}}" alt="{{tags.name}}" height="40px" width="100%"></a> {{tags.name}}
+        <a href="{% url 'tags' tag.id%}"><img src="{{tags.pic.url}}" alt="{{tags.name}}" height="40px" width="100%"></a> {{tags.name}}
       </div>
       {% endfor %}
     </ul>
@@ -16,7 +16,7 @@
   <div class="row">
     <h1>Record Studios</h1>
     <h4>Studios you may like.</h4>
-    <p>Find different studios for you as an artist if you want to rehears or record you music or shoot a video</p>
+    <p>Find different studios for you as an artist if you want to rehears or record you music or shoot a video. Studios are categorised in terms of what they offer.</p>
   </div>
 
 
