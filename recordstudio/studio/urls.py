@@ -12,7 +12,7 @@ urlpatterns = [
     url(r'^image/$', views.images, name='image'),
     url(r'^tags/$', views.tag, name='tags'),
     url(r'^categories/(\d+)', views.categories, name='categories'),
-
+    url(r'^artist_profile/(\d+)$', views.artist_profile, name='artist_profile'),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
