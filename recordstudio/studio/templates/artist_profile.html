@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {% load bootstrap3 %} {% load static %} {% block content %}
+
+<div class="container">
+
+  <div class="row">
+    <img src="{{artist_profile.picture.url}}" class="img-responsive" alt="">
+  </div>
+
+  <div class="row">
+    <h1 class="text-center">{{artist_profile.name}}</h1>
+  </div>
+
+  <div class="row">
+    {% autoescape on %} {{artist_profile.post| safe}} {% endautoescape %}
+  </div>
+
+  <div class="row">
+    <p>Posted {{artist_profile.name}} {{artist_profile.location}}</p>
+  </div>
+
+</div>
+
+{% endblock %}
