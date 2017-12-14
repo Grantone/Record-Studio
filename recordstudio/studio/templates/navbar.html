@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <div class="navbar navbar-inverse" role="navigation" id="love">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="{% url 'index' %}"><i class="glyphicon glyphicon-diamond" id="icon"></i></a>
+      </div>
+      <div class="col-sm-4 col-md-4 navbar">
+        <form action="{% url 'search_results' %}" class="navbar-form">
+          <div class="input-group">
+            <input type="text" autocorrect="off" id="searchbar" name="tag" data-test="search-input-input" placeholder="Search for a studio" tabindex="1" value="">
+          </div>
+        </form>
+      </div>
+      <div class="nav navbar-brand navbar-collapse collapse-right" id="nav">
+        <ul class="nav navbar-brand" style="color: black;">
+          <a href="/">Home</a>
+          <a href="/">Categories</a>
+          <a href="/">Location</a>
+          <a href="/accounts/login/"><button>Login</button></a>
+          <a href="/accounts/register/"> <button type="button" class="btn btn-success">Join free</button></a>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

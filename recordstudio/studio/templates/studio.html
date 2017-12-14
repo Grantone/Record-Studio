@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load bootstrap3 %} {% load static %} {% block scripts %}
+
+<div class="row">
+  <h3>Most featured get_studios</h3>
+  <p>Get see the studios ranked most and the best studios in town for you artists who are really interested.</p>
+</div>
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}"> {{block.super}} {%endblock%} {%block content%}
+<header class="text-center text-white d-flex" class="container">
+  <div class="image_studio">
+    <div class="">
+      <a href="{% url 'search_results' %}">{{studio.name}}</a>
+    </div>
+    <div class="container" id="inga">
+      <a href="{% url 'studio' studio_id %}">{{studio.name}}
+            <img src="{{studio.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>
+    </div>
+    {%for tag in studio.tags.all%}
+    <p id="pic">{{tag.name}} </p>
+    {%endfor%}
+  </div>
+</header>
+{% endblock %}

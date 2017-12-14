@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load bootstrap3 %} {% load static %} {% block scripts %}
+
+<div class="row">
+  <h3>Categories</h3>
+  <p>We have a variety of studios rated according to their functionality i.e say rehersal studios, project studios etc.</p>
+</div>
+
+<link rel="stylesheet" href="{% static 'css/index.css' %}"> {{block.super}} {%endblock%} {%block content%}
+<header class="text-center text-white d-flex" class="container">
+  <div class="image_studio">
+    <div class="">
+      {{studio.name}}
+    </div>
+    <div class="container" id="inga">
+      <a href="#" data-toggle="modal" data-target="">
+            <img src="{{studio_item.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>
+    </div>
+    {%for tag in studio.tags.all%}
+    <p id="pic">{{tag.name}} </p>
+    {%endfor%}
+  </div>
+</header>
+{% endblock %}

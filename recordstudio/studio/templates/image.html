@@ -1,0 +1,43 @@
+{% extends 'base.html' %} {% load bootstrap3 %} {% load static %} {% block scripts %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}"> {% endblock %} {% block body %} {{block.super}} {% include 'navbar.html' %} {{ block.super }}
+
+
+
+<header class="image_page text-center text-white d-flex">
+  <div class="container">
+    <div class="flex-container">
+      {% for tag in image.tags.all %}
+      <div class="tag_section">
+        <img src="{{tag.tag_image.url}}" alt="">
+        <div class="centered">
+          <small>{{tag.name}}</small>
+        </div>
+      </div>
+      {% empty %} There are no available tags for this image... {% endfor %}
+    </div>
+  </div>
+  <div class="center">
+    <h1 class="text-center">
+        <strong>{{image.studio.name}}</strong>
+      </h1>
+    <hr>
+  </div>
+
+  <div class="center">
+    <div class="container hover-zoom">
+      <img src="{{image.image_image.url}}" class="img-responsive">
+    </div>
+    <div class="image_title">
+      <h2 class="text-center">{{image.title}}</h2>
+    </div>
+    <div class="image_story">
+      <p>{{image.link}}</p>
+    </div>
+    <div class="center image_link">
+      <input type="text" class="form-control" name="image_link" value="{{image.image_image.url}}">
+    </div>
+  </div>
+
+</header>
+
+{% endblock %}

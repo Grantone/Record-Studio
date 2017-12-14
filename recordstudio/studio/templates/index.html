@@ -1,0 +1,46 @@
+{%extends 'base.html'%}{% load static %} {% block styles %} {{block.super}} {% endblock %} {% block content %} {{block.super}}
+
+<div class="container-fluid">
+  <div class="row">
+    <ul>
+      {% for tag in tags%}
+      <div class="col-md-1">
+        <a href="{% url 'tags' tag.id%}"><img src="{{tags.image.url}}" alt="{{tags.name}}" height="40px" width="100%"></a> {{tags.name}}
+      </div>
+      {% endfor %}
+    </ul>
+  </div>
+
+
+
+  <div class="row">
+    <h1>Record Studios</h1>
+    <h4>Studios you may like.</h4>
+    <p>Find different studios for you as an artist if you want to rehears or record you music or shoot a video</p>
+  </div>
+
+
+
+  <div class="row" id="">
+    {% for tag in all_tags %}
+    <div class="col-xs-2 col-sm-2 col-md-1 col-lg-1" id="">
+      <h4 class="text-center" id="tagname"></h4>
+      <a href=""><img src="{{tag.image.url}}" alt="{{tag.name}}" class="" id="cover"></a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="row" id="">
+
+    <h2> Our studios </h2> {% for studios_item in studios %}
+    <div class="col-xs-12  col-sm-2 col-md-4 col-lg-4">
+      <img src="{{studios_item.studio_image.url}}" class="img-responsive" alt="Image" id="space">
+
+
+      <a href="">
+        <h4 class="text-center">{{studios_item.name}}</h4></a>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% endblock %}

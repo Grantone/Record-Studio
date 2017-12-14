@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {% load static %} {% block scripts %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}"> {% endblock %} {% block content %} {{block.super}}
+
+
+<div class="container">
+
+  <div class="row">
+    {% if studios%}
+    <h2>Found {{ studios|length }} of searched term {{message}}</h2> {% else %}
+    <h2> Found 0 studios for the search term {{message}}</h2> {% endif %}
+
+  </div>
+
+
+  {% for studio in studios %}
+  <div class="col-xs-12 col-sm-6 col-md-12 col-lg-2" id="">
+    <h4 class="text-center" id="">{{studio.name}}</h4>
+    <a href="{% url 'studio' studio.id %}"><img src="{{studio.studio_image.url}}" alt="{{studio.name}}" class="img-responsive" style="height: 60px; width: 160px; display: inline; margin-left: -30px;"></a>
+  </div>
+  {% endfor %}
+
+</div>
+{% endblock %}
