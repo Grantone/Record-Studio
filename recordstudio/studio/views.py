@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from .models import Studio, tags
 from django.http import Http404
 from django.contrib.auth.decorators import login_required
-
+from .forms import ArtistForm
 # Create your views here.
 
 
@@ -62,6 +62,13 @@ def categories(request):
 def locations(request):
     studios = Studio.objects.all()
     return render(request, 'location.html', {"studios": studios})
+
+
+def artist_profile(request, user_id):
+    user = request.user
+    artist_profile = Artist.objects.get(user_id=user.id)
+
+    return render(request, 'artist_profile.html', {"artist_profile": artist_profile})
 
 
 def search_results(request):

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'studio.apps.StudioConfig',
     'bootstrap3',
     'phonenumber_field',
+    'tinymce',
 ]
 
 MIDDLEWARE = [

@@ -1,8 +1,10 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-
+from tinymce.models import HTMLField
+from django.contrib.auth.models import User
 
 # Create your models here.
+
 
 class tags(models.Model):
     name = models.CharField(max_length=30)
@@ -34,6 +36,13 @@ class User(models.Model):
 
     def __str__(self):
         return self.first_name
+
+
+class Artist(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=30)
+    phone = PhoneNumberField(max_length=30)
+    location = models.CharField(max_length=60)
 
 
 class Studio(models.Model):
