@@ -13,7 +13,8 @@
     </div>
     <div class="container" id="inga">
       <a href="{% url 'studio' studio.id %}">{{studio.name}}
-            <img src="{{studio.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>{{studio.description}}<br> {{studio.price}}
+            <img src="{{studio.studio_image.url}}" class="img-responsive" alt="{{studio.name}}"></a>{{studio.description}}<br> {{studio.location}}
+      <br> {{studio.price}}
     </div>
 
   </div>
