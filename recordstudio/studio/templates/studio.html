@@ -1,9 +1,9 @@
 {% extends 'base.html' %} {% load bootstrap3 %} {% load static %} {% block scripts %}
 
-<div class="col-md-6">
+<!-- <div class="col-md-6">
   <h3>Most featured studios</h3>
   <p>Get see the studios ranked most and the best studios in town for you artists who are really interested.</p>
-</div>
+</div> -->
 
 <link rel="stylesheet" href="{% static 'css/index.css' %}"> {{block.super}} {%endblock%} {%block content%}
 <header class="text-center text-white d-flex" class="container">
@@ -17,38 +17,45 @@
     </div>
 
   </div>
-  <br>
-  <div class="col-md-4">
-    <div id="map">
-    </div>
+
 
 </header>
 
 <body>
+  <div class="table">
 
-  <table style="width:100%">
-    <caption>Studio Category</caption>
-    <tr>
-      <th>Rehersal Studio</th>
-      <th>Estimated Charges per hour</th>
-    </tr>
-    <tr>
-      <td>Project Studio</td>
-      <td>$1600</td>
-    </tr>
-    <tr>
-      <td>Mid Level Studio</td>
-      <td>$1080</td>
-    </tr>
-    <tr>
-      <td>Top Line</td>
-      <td>$1000</td>
-    </tr>
-    <tr>
-      <td>Podcast Studio</td>
-      <td>$1500</td>
-    </tr>
-  </table>
+    <table style="width:100%">
+      <caption>Studio Category</caption>
+      <tr>
+        <th>Studio Type</th>
+        <th>Estimated Charges per hour</th>
+      </tr>
+      <tr>
+        <td>Rehearsal Studio</td>
+        <td>$1000</td>
+      </tr>
+      <tr>
+        <td>Project Studio</td>
+        <td>$1600</td>
+      </tr>
+      <tr>
+        <td>Mid Level Studio</td>
+        <td>$1080</td>
+      </tr>
+      <tr>
+        <td>Top Line</td>
+        <td>$1000</td>
+      </tr>
+      <tr>
+        <td>Podcast Studio</td>
+        <td>$1500</td>
+      </tr>
+    </table>
 
 </body>
-{% endblock %}
+</div>
+<br>
+<div class="col-md-4">
+  <div id="map">
+  </div>
+  {% endblock %}
