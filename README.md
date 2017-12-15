@@ -8,7 +8,6 @@ The application will allow users to view different studios and also allow users 
   <li>View the type of studio according to category. </li>
   <li>View the contacts of the studio</li>
   <li>View the location where they are located and their support details.</li>
-  <li>Book an appointment on recording or song rehersal</li>
 
 </ul>
 
@@ -51,7 +50,8 @@ These instructions will get you a copy of the project up and running on your loc
 
  ## Known Bugs
  <ul>
-  <li>........</li>
+  <li>To make the artist be able to book an appointment with a particular studio.</li>
+  <li>To make the map real time.</li>
 
  </ul>
 
