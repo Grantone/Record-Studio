@@ -40,7 +40,7 @@ These instructions will get you a copy of the project up and running on your loc
   <li>Postgresql</>
  </ul>
 
- ## Technologies Used
+## Technologies Used
 <ul>
   <li>Python3.6</li>
   <li>Django</li>
@@ -48,7 +48,7 @@ These instructions will get you a copy of the project up and running on your loc
   <li>Bootstrap3</li>
  </ul>
 
- ## Known Bugs
+## Known Bugs
  <ul>
   <li>To make the artist be able to book an appointment with a particular studio.</li>
   <li>To make the map real time.</li>
